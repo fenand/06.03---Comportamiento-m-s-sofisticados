@@ -110,4 +110,28 @@ public class DrawDemo
         // pen.move(300);
         // }
     }
+
+    /**
+     * metodo para dibujar un pentagono
+     */
+    public void dibujarPentagono(){
+        Pen pen = new Pen(250,100,myCanvas);
+        pen.setColor(Color.GREEN);
+
+        // creamos la alternativa eficiente con bucle
+
+        for(int i = 0 ; i< 5 ; i++){
+
+            pen.move(150); 
+            pen.turn(72);
+
+        }
+    }
+    /**
+     * metodo para dibujar 
+     */
+
+    /**
+     * metodo para dibujar 
+     */
 }
