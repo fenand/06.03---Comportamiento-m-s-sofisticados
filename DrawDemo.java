@@ -19,7 +19,7 @@ public class DrawDemo
      */
     public DrawDemo()
     {
-        myCanvas = new Canvas("Drawing Demo", 500, 400);  
+        myCanvas = new Canvas("Drawing Demo", 700, 600);  
         myCanvas.erase();
         random = new Random();
     }
@@ -127,10 +127,26 @@ public class DrawDemo
 
         }
     }
-    /**
-     * metodo para dibujar 
-     */
 
+    /**
+     * metodo para dibujar un poligono regular  de n lados 
+     */
+    public void dibujarPoligonoNLados(int numeroDeLados){
+
+        Pen pen = new Pen(250,100,myCanvas);
+        pen.setColor(Color.GREEN);
+        if (numeroDeLados<3){
+            System.out.println("Un poligono tiene mas de 2 lados");}
+        else{
+            for(int i = 0 ; i< numeroDeLados ; i++){
+
+                pen.move(50); 
+                pen.turn(360/numeroDeLados);
+
+            }
+        }
+
+    }
     /**
      * metodo para dibujar 
      */
