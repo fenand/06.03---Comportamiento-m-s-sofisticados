@@ -117,14 +117,10 @@ public class DrawDemo
     public void dibujarPentagono(){
         Pen pen = new Pen(250,100,myCanvas);
         pen.setColor(Color.GREEN);
-
         // creamos la alternativa eficiente con bucle
-
         for(int i = 0 ; i< 5 ; i++){
-
             pen.move(150); 
             pen.turn(72);
-
         }
     }
 
@@ -139,15 +135,23 @@ public class DrawDemo
             System.out.println("Un poligono tiene mas de 2 lados");}
         else{
             for(int i = 0 ; i< numeroDeLados ; i++){
-
                 pen.move(50); 
                 pen.turn(360/numeroDeLados);
-
             }
         }
-
     }
+
     /**
-     * metodo para dibujar 
+     * metodo para dibujar una espiral automaticamente
+     * 
      */
+
+    public void espiralAutomatica(){
+        Pen pen = new Pen(250,200,myCanvas);
+        pen.setColor(Color.BLACK);
+        for(int i = 1 ; i < 101 ; i++){
+            pen.move(i * 4);
+            pen.turn(90);
+        }
+    }
 }
